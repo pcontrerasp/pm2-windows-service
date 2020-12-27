@@ -15,6 +15,7 @@ const assert = require('assert'),
     sid = get_sid();
 
 co(function*() {
+    console.log('Start testing...');
     // We deploy everything to a temp dir to avoid creating daemon files in this repo
     let temp_dir = yield mkdir_temp('pm2-windows-service-test');
 
@@ -32,11 +33,12 @@ co(function*() {
     const pm2ws = require(path.resolve(temp_dir, 'node_modules', 'pm2-windows-service'));
 
     console.log('Installing service...');
-    yield pm2ws.install(sid, true);
+    yield pm2ws.install(sid, sid, true);
 
     // Use node-windows to work out what name it gave the service
     let service = new Service({
         name: sid,
+        description: sid,
         script: path.resolve(__dirname, '../src/service.js')
     });
 

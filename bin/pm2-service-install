@@ -3,8 +3,9 @@
 'use strict';
 
 const args = require('yargs')
-        .usage('Usage: $0 [-n <service name>] [--unattended]')
+        .usage('Usage: $0 [-n <service name>] [-d <service description>] [--unattended]')
         .alias('n', 'name')
+        .alias('d', 'description')
         .alias('u', 'unattended')
         .argv,
     pm2ws = require('../src/index');
