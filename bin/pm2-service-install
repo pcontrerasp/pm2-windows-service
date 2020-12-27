@@ -7,6 +7,8 @@ const args = require('yargs')
         .alias('n', 'name')
         .alias('d', 'description')
         .alias('u', 'unattended')
+        .help('h')
+        .alias('h', 'help')
         .argv,
     pm2ws = require('../src/index');
 

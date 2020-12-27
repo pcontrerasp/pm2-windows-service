@@ -1,7 +1,7 @@
 {
-  "name": "pm2-windows-service",
-  "version": "0.2.1",
-  "description": "Install PM2 as a service on windows",
+  "name": "pm2-waas",
+  "version": "0.3.0",
+  "description": "PM2 on windows as a service",
   "main": "src/index.js",
   "bin": {
     "pm2-service-install": "bin/pm2-service-install",
@@ -12,19 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jon-hall/pm2-windows-service.git"
+    "url": "git+https://github.com/pcontrerasp/pm2-windows-service.git"
   },
   "keywords": [
     "pm2",
     "windows",
     "service"
   ],
-  "author": "Jon Hall <jon_hall@outlook.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/jon-hall/pm2-windows-service/issues"
-  },
-  "homepage": "https://github.com/jon-hall/pm2-windows-service#readme",
+  "homepage": "https://github.com/pcontrerasp/pm2-windows-service#readme",
   "dependencies": {
     "co": "^4.6.0",
     "co-event": "^0.1.0",
@@ -35,7 +31,7 @@
     "node-windows": "^0.1.10",
     "promisify-node": "^0.5.0",
     "shelljs": "^0.7.0",
-    "yargs": "^4.7.1"
+    "yargs": "^16.2.0"
   },
   "engines": {
     "node": ">=4.0.0"

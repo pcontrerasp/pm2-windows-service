@@ -30,7 +30,7 @@ co(function*() {
     yield exec('npm i "' + package_dir + '"', { cwd: temp_dir });
 
     // Finally, we require in our copy from the temp dir
-    const pm2ws = require(path.resolve(temp_dir, 'node_modules', 'pm2-windows-service'));
+    const pm2ws = require(path.resolve(temp_dir, 'node_modules', 'pm2-waas'));
 
     console.log('Installing service...');
     yield pm2ws.install(sid, sid, true);
